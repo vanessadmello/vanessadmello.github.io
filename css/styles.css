@@ -1,129 +1,188 @@
-/*font-family: 'MonteCarlo', cursive;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Zilla Slab', serif;*/
-
 body {
-  margin: 0px;
-  font-family: "Montserrat", sans-serif;
-  text-align: center;
+	font-family: "Cutive Mono", monospace;
+	background-color: #000000;
+	color: #32e0c4;
 }
 
-h1 {
-  font-family: "MonteCarlo", cursive;
-  margin: 0px;
-  font-size: 5.725rem;
-  /*color: #11999e;*/
-  color: #66bfbf;
+/* --------------------------------Navigation Bar ------------------------------------- */
+
+.topnav {
+	background-color: #000000;
+	overflow: hidden;
 }
 
-hr {
-  border-style: dotted none none none;
-  border-color: #eaf6f6;
-  border-width: 7px;
-  width: 50px;
+.topnav a {
+	float: left;
+	display: block;
+	color: #32e0c4;
+	text-align: center;
+	padding: 14px 25px;
+	margin: 0 25px;
+	text-decoration: none;
+	font-size: 22px;
+	font-weight: 500;
 }
 
-h2 {
-  font-family: "Zilla Slab", serif;
-  font-size: 2.5rem;
-  /* color: #11999e; */
-  color: #66bfbf;
-  font-weight: normal;
+.topnav a:hover {
+	background-color: #32e0c4;
+	color: black;
+	border-radius: 2px;
 }
 
-h3 {
-  color: #11999e;
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+	display: none;
 }
 
-.top-container {
-  /* background-color: #edf6e5; */
-  background-color: #eaf6f6;
-  margin: 0px;
-  padding: 30px 30px 10px 30px;
+/* smaller screen show icon and remove all links */
+@media screen and (max-width: 850px) {
+	.topnav a {
+		display: none;
+	}
+	.topnav a.icon {
+		float: right;
+		display: block;
+	}
 }
 
-.middle-container {
-  /* background-color: #b5eaea; */
-  width: 50%;
-  margin-top: auto;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 850px) {
+	.topnav.responsive {
+		position: relative;
+	}
+	.topnav.responsive a.icon {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	.topnav.responsive a {
+		float: none;
+		display: block;
+		text-align: left;
+	}
 }
 
-.bottom-container {
-  /* background-color: #f38ba0; */
-  background-color: #66bfbf;
-  padding: 20px;
-  width: 100%;
-  display: block;
+canvas {
+	display: block;
+	vertical-align: bottom;
 }
 
-.bottom-cloud {
-  position: absolute;
+#particles-js {
+	background: black;
+	height: 100vh;
 }
 
-.top-cloud {
-  position: relative;
-  left: 200px;
+/*------------------------------- Home Container ----------------------------------- */
+.home-container {
+	position: absolute;
+	top: 12%;
+	padding: 20px;
+	z-index: 5;
 }
 
-.footer-link {
-  color: #11999e;
-  display: inline;
-  padding: 15px;
-  margin: 10px;
+canvas {
+	display: block;
+	vertical-align: bottom;
 }
 
-.skill-row {
-  margin: 100px auto 100px auto;
-  text-align: left;
-  line-height: 2;
+.title {
+	font-size: 6rem;
+	font-weight: 800;
 }
 
-.java-img {
-  width: 25%;
-  float: left;
-  padding-right: 30px;
+@media screen and (max-width: 1100px) {
+	.home-container {
+		top: 15%;
+	}
+
+	.title {
+		font-size: 6rem;
+	}
 }
 
-.football-img {
-  width: 25%;
-  float: right;
-  padding-left: 20px;
-}
-.my-description {
-  color: #40514e;
-  padding-bottom: 35px;
-  font-weight: 100;
+@media screen and (max-width: 850px) {
+	.home-container {
+		top: 25%;
+	}
+
+	.title {
+		font-size: 4.2rem;
+	}
 }
 
-.BUTTON_QGS {
-  background: #66bfbf;
-  background-image: -webkit-linear-gradient(top, #66bfbf, #66bfbf);
-  background-image: -moz-linear-gradient(top, #66bfbf, #66bfbf);
-  background-image: -ms-linear-gradient(top, #66bfbf, #66bfbf);
-  background-image: -o-linear-gradient(top, #66bfbf, #66bfbf);
-  background-image: -webkit-gradient(to bottom, #66bfbf, #66bfbf);
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
-  color: #ffffff;
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  font-weight: 100;
-  padding: 10px;
-  -webkit-box-shadow: 1px 1px 1px 0 #000000;
-  -moz-box-shadow: 1px 1px 1px 0 #000000;
-  box-shadow: 1px 1px 1px 0 #000000;
-  text-shadow: -1px 1px 1px #000000;
-  border: solid #337fed 1px;
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
-  text-align: center;
+@media screen and (max-width: 600px) {
+	.home-container {
+		top: 30%;
+	}
+	.title {
+		font-size: 3.3rem;
+	}
 }
 
-.copy {
-  color: #eaf6f6;
+/* Button */
+.btn {
+	line-height: 50px;
+	height: 50px;
+	text-align: center;
+	width: 250px;
+	cursor: pointer;
+}
+
+.btn-one {
+	font-size: 1.5rem;
+	font-weight: 800;
+	color: #fff;
+	padding: 8px;
+	transition: all 0.3s;
+	position: relative;
+}
+.btn-one span {
+	transition: all 0.3s;
+}
+.btn-one::before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: 0;
+	transition: all 0.3s;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: rgba(51, 225, 196, 0.5);
+	border-bottom-color: rgba(51, 225, 196, 0.5);
+	transform: scale(0.1, 1);
+}
+.btn-one:hover span {
+	letter-spacing: 2px;
+}
+.btn-one:hover::before {
+	opacity: 1;
+	transform: scale(1, 1);
+}
+.btn-one::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	transition: all 0.3s;
+	background-color: rgba(51, 225, 196, 0.6);
+}
+.btn-one:hover::after {
+	opacity: 0;
+	transform: scale(0.1, 1);
+}
+
+@media screen and (max-width: 600px) {
+	.btn-one {
+		padding: 2px;
+		font-size: 1.2rem;
+	}
 }
