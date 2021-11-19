@@ -1,0 +1,23 @@
+{
+  "name": "my-site",
+  "version": "2.0.0",
+  "description": "\"My Portfolio Website\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanessadmello/Portfolio-Website.git"
+  },
+  "author": "Vanessa D'mello",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vanessadmello/Portfolio-Website/issues"
+  },
+  "homepage": "https://github.com/vanessadmello/Portfolio-Website#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "particles.js": "^2.0.0"
+  }
+}

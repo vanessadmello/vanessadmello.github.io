@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
 
   <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/392a9cf0ae.js" crossorigin="anonymous"></script>
 
   <!-- My Stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
@@ -24,11 +24,11 @@
 <body>
 
   <!-- Navigation Bar -->
-  <div class="topnav" id="myTopnav">
-    <a href="#home">Home</a>
-    <a href="#about">About Me</a>
-    <a href="#news">My Works</a>
-    <a href="#contact">Contact Me</a>
+  <div class="topnav sticky" id="myTopnav">
+    <a href="#home"><i class="fas fa-home"></i> Home</a>
+    <a href="#about"><i class="fas fa-address-card"></i> About Me</a>
+    <a href="#news"><i class="fas fa-briefcase"></i> My Works</a>
+    <a href="#contact"><i class="fas fa-envelope"></i> Contact Me</a>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
       <i class="fa fa-bars"></i>
     </a>
@@ -36,25 +36,29 @@
 
   <!-- Home Container -->
   <div id="particles-js"></div>
-    <div id="home" class="home-container">
+  <div id="home" class="home-container">
+    <div class="heading">
       <h1 class="title">
         Hi,<br />
         I'm Vanessa<br />
         <span>Web Developer <span>
       </h1>
-      <div class="btn btn-one" href="#contact">
-        <span>
-          Contact Me
-        </span>
-      </div>
     </div>
-  
+    <div class="btn btn-one" href="#contact">
+      <span>
+        Contact Me
+      </span>
+    </div>
+  </div>
+  <div class="contact-container">
+
+    <form action=""></form>
+
+  </div>
 
 
-  <script src="./javascript/particles.js"></script>
+  <script src="./node_modules/particles.js/particles.js"></script>
   <script src="./javascript/index.js"></script>
-
-
 </body>
 
 </html>

@@ -34,6 +34,12 @@ body {
 	display: none;
 }
 
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
 /* smaller screen show icon and remove all links */
 @media screen and (max-width: 850px) {
 	.topnav a {
@@ -68,8 +74,8 @@ canvas {
 }
 
 #particles-js {
-	background: black;
 	height: 100vh;
+	z-index: 0;
 }
 
 /*------------------------------- Home Container ----------------------------------- */
@@ -77,7 +83,6 @@ canvas {
 	position: absolute;
 	top: 12%;
 	padding: 20px;
-	z-index: 5;
 }
 
 canvas {
@@ -102,7 +107,7 @@ canvas {
 
 @media screen and (max-width: 850px) {
 	.home-container {
-		top: 25%;
+		top: 28%;
 	}
 
 	.title {
@@ -112,7 +117,7 @@ canvas {
 
 @media screen and (max-width: 600px) {
 	.home-container {
-		top: 30%;
+		top: 33%;
 	}
 	.title {
 		font-size: 3.3rem;
