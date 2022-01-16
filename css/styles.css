@@ -1,20 +1,25 @@
 body {
 	font-family: "Cutive Mono", monospace;
 	background-color: #000000;
-	color: #32e0c4;
+	color: #ff457c;
+	margin: 0;
 }
 
 /* --------------------------------Navigation Bar ------------------------------------- */
 
 .topnav {
 	background-color: #000000;
+	position: fixed;
+	z-index: 1;
+	width: 100%;
 	overflow: hidden;
+	opacity: 1;
 }
 
 .topnav a {
 	float: left;
 	display: block;
-	color: #32e0c4;
+	color: #ff457c;
 	text-align: center;
 	padding: 14px 25px;
 	margin: 0 25px;
@@ -24,7 +29,7 @@ body {
 }
 
 .topnav a:hover {
-	background-color: #32e0c4;
+	background-color: #ff457c;
 	color: black;
 	border-radius: 2px;
 }
@@ -34,14 +39,8 @@ body {
 	display: none;
 }
 
-.sticky {
-	position: fixed;
-	top: 0;
-	width: 100%;
-}
-
 /* smaller screen show icon and remove all links */
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 970px) {
 	.topnav a {
 		display: none;
 	}
@@ -52,9 +51,10 @@ body {
 }
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 970px) {
 	.topnav.responsive {
-		position: relative;
+		position: fixed;
+		z-index: 1;
 	}
 	.topnav.responsive a.icon {
 		position: absolute;
@@ -73,15 +73,19 @@ canvas {
 	vertical-align: bottom;
 }
 
+/*------------------------------- Home Container ----------------------------------- */
 #particles-js {
-	height: 100vh;
+	height: 98vh;
 	z-index: 0;
 }
 
-/*------------------------------- Home Container ----------------------------------- */
+#home {
+	margin-bottom: 8%;
+}
+
 .home-container {
 	position: absolute;
-	top: 12%;
+	top: 10%;
 	padding: 20px;
 }
 
@@ -108,6 +112,8 @@ canvas {
 @media screen and (max-width: 850px) {
 	.home-container {
 		top: 28%;
+		width: auto;
+		height: auto;
 	}
 
 	.title {
@@ -118,9 +124,13 @@ canvas {
 @media screen and (max-width: 600px) {
 	.home-container {
 		top: 33%;
+		margin-left: 2%;
 	}
 	.title {
 		font-size: 3.3rem;
+	}
+	.heading {
+		text-align: center;
 	}
 }
 
@@ -131,6 +141,7 @@ canvas {
 	text-align: center;
 	width: 250px;
 	cursor: pointer;
+	z-index: 0;
 }
 
 .btn-one {
@@ -142,7 +153,7 @@ canvas {
 	position: relative;
 }
 .btn-one span {
-	transition: all 0.3s;
+	transition: all 0.5s;
 }
 .btn-one::before {
 	content: "";
@@ -151,15 +162,14 @@ canvas {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	z-index: 1;
 	opacity: 0;
 	transition: all 0.3s;
 	border-top-width: 1px;
 	border-bottom-width: 1px;
 	border-top-style: solid;
 	border-bottom-style: solid;
-	border-top-color: rgba(51, 225, 196, 0.5);
-	border-bottom-color: rgba(51, 225, 196, 0.5);
+	border-top-color: #ff457c;
+	border-bottom-color: #ff457c;
 	transform: scale(0.1, 1);
 }
 .btn-one:hover span {
@@ -178,7 +188,7 @@ canvas {
 	height: 100%;
 	z-index: 1;
 	transition: all 0.3s;
-	background-color: rgba(51, 225, 196, 0.6);
+	background-color: rgb(255, 69, 124, 0.65);
 }
 .btn-one:hover::after {
 	opacity: 0;
@@ -189,5 +199,116 @@ canvas {
 	.btn-one {
 		padding: 2px;
 		font-size: 1.2rem;
+		width: 100%;
+	}
+}
+
+/* ---------------------------------------------- HR ------------------------------------------- */
+.horizontal-divider {
+	height: 2px;
+	border-radius: 2px;
+	color: #ff457c;
+	border: 2px solid currentColor;
+	width: 95%;
+}
+
+/* -------------------------------------------About Container -----------------------------------------*/
+#about {
+	margin-top: 7%;
+	margin-bottom: 8%;
+}
+
+.about-container {
+	overflow: hidden;
+	position: static;
+	padding: 2%, 0%;
+	margin: 2%;
+}
+
+.about-child-image {
+	width: 29%;
+	float: left;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.about-child-content {
+	font-size: 1.5rem;
+	width: 70%;
+	float: left;
+}
+
+.image-avatar {
+	border-radius: 5%;
+	margin-left: 25px;
+	width: 70%;
+}
+
+@media screen and (max-width: 1400px) {
+	.about-child-content {
+		font-size: 1.35rem;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.about-child-content {
+		font-size: 1.2rem;
+	}
+	.image-avatar {
+		width: 85%;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.about-child-content {
+		font-size: 1.1rem;
+	}
+	.image-avatar {
+		width: 90%;
+		margin-left: 10px;
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.about-container {
+		margin-top: 5%;
+	}
+	.about-child-content {
+		font-size: 1.1rem;
+		float: none;
+		width: auto;
+		height: auto;
+		margin: 2%;
+	}
+	.about-child-image {
+		margin-left: 20%;
+		margin-bottom: 6%;
+		float: none;
+	}
+	.image-avatar {
+		width: 45vw;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.about-container {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.about-child-content {
+		margin: 10%;
+
+		font-size: 1.1rem;
+		float: none;
+	}
+	.about-child-image {
+		margin: 12% 0 12% 15%;
+		float: none;
+	}
+	.image-avatar {
+		margin-left: 0;
+		width: 55vw;
+		height: auto;
 	}
 }
