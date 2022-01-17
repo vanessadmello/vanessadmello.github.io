@@ -1,8 +1,19 @@
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: "Cutive Mono", monospace;
 	background-color: #000000;
 	color: #ff457c;
 	margin: 0;
+}
+
+.title-header {
+	font-size: 3rem;
+	font-weight: 800;
+	padding-left: 2%;
+	text-decoration: underline;
 }
 
 /* --------------------------------Navigation Bar ------------------------------------- */
@@ -425,7 +436,6 @@ canvas {
 		grid-template-columns: 1fr 1fr;
 		margin-left: auto;
 		margin-right: auto;
-
 		overflow: hidden;
 	}
 }
@@ -459,24 +469,26 @@ canvas {
 
 /* -------------------------------------- Contact Container------------------------------------------- */
 #contact {
-	margin: 0;
+	margin-bottom: 4%;
 	padding: 0;
-	min-height: 100vh;
-	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
 .contact-container {
-	width: 1000px;
 	position: relative;
 	display: flex;
-	justify-content: space-between;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 .card-contact {
 	position: relative;
-	border-radius: 10px;
+	padding: 1%;
+	flex: 20%;
+	max-width: 25%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .card-contact .icon {
@@ -490,25 +502,44 @@ canvas {
 }
 
 .card-contact:nth-child(1) .icon {
-	background: #6eadd4;
+	background: #006192;
 }
 
 .card-contact:nth-child(2) .icon {
-	background: #e07768;
+	background: #f09433;
+	background: -moz-linear-gradient(
+		45deg,
+		#f09433 0%,
+		#e6683c 25%,
+		#dc2743 50%,
+		#cc2366 75%,
+		#bc1888 100%
+	);
+	background: -webkit-linear-gradient(
+		45deg,
+		#f09433 0%,
+		#e6683c 25%,
+		#dc2743 50%,
+		#cc2366 75%,
+		#bc1888 100%
+	);
+	background: linear-gradient(
+		45deg,
+		#f09433 0%,
+		#e6683c 25%,
+		#dc2743 50%,
+		#cc2366 75%,
+		#bc1888 100%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
 }
 
 .card-contact:nth-child(3) .icon {
-	background: #4aada9;
+	background: #bb001b;
 }
 
-.card-contact .icon .fa {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	font-size: 80px;
-	transition: 0.7s;
-	color: #fff;
+.card-contact:nth-child(4) .icon {
+	background: #202c38;
 }
 
 .icon-contact {
@@ -522,8 +553,8 @@ canvas {
 }
 
 .face {
-	width: 300px;
-	height: 200px;
+	height: 140px;
+	width: auto;
 	transition: 0.5s;
 }
 
@@ -552,7 +583,7 @@ canvas {
 }
 
 .content .icon-contact {
-	max-width: 100px;
+	max-width: 80px;
 }
 
 .face.face2 {
@@ -590,4 +621,62 @@ canvas {
 .contact-container a {
 	text-decoration: none;
 	color: #414141;
+}
+
+@media screen and (max-width: 650px) {
+	.contact-container {
+		flex-direction: column;
+	}
+	.face {
+		width: 160%;
+	}
+	.face.face2 {
+		padding: 5%;
+	}
+	.card-contact {
+		margin-left: 100px;
+		flex: 100%;
+		max-width: 120%;
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.face.face2 {
+		padding: 0;
+	}
+	.face {
+		width: 115%;
+	}
+	.card-contact {
+		flex: 40%;
+		max-width: 60%;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.face.face2 {
+		padding: 0;
+	}
+	.card-contact {
+		flex: 40%;
+		max-width: 35%;
+	}
+}
+
+#scroll-up {
+	float: right;
+	position: relative;
+	border: 0px;
+	padding-bottom: 20px;
+	background-color: #000000;
+	color: #ff457c;
+}
+
+#scroll-up:hover {
+	color: #ff94cc;
+}
+
+.footer {
+	text-align: center;
+	margin: 2%;
 }
