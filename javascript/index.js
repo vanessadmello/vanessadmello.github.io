@@ -9,7 +9,6 @@ function myFunction() {
 }
 
 var scrollToTopBtn = document.getElementById("scroll-up");
-
 var rootElement = document.documentElement;
 function scrollToTop() {
 	// scroll to top logic
@@ -18,10 +17,7 @@ function scrollToTop() {
 		behavior: "smooth",
 	});
 }
-
 scrollToTopBtn.addEventListener("click", scrollToTop);
-
-var rootElement = document.documentElement;
 
 // ParticlesJS Config.
 particlesJS("particles-js", {

@@ -9,11 +9,14 @@ body {
 	margin: 0;
 }
 
+.light-mode {
+	background-color: white;
+}
+
 .title-header {
-	font-size: 3rem;
+	font-size: 2.5rem;
 	font-weight: 800;
 	padding-left: 2%;
-	text-decoration: underline;
 }
 
 /* --------------------------------Navigation Bar ------------------------------------- */
@@ -50,7 +53,7 @@ body {
 	display: none;
 }
 
-/* smaller screen show icon and remove all links */
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 970px) {
 	.topnav a {
 		display: none;
@@ -59,10 +62,7 @@ body {
 		float: right;
 		display: block;
 	}
-}
 
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 970px) {
 	.topnav.responsive {
 		position: fixed;
 		z-index: 1;
@@ -104,6 +104,18 @@ canvas {
 .title {
 	font-size: 6rem;
 	font-weight: 800;
+}
+
+@media screen and (max-width: 300px) {
+	.home-container {
+		top: 10%;
+		width: auto;
+		height: auto;
+	}
+
+	.title {
+		font-size: 2rem;
+	}
 }
 
 @media screen and (max-width: 1100px) {
@@ -337,7 +349,7 @@ canvas {
 }
 
 .card {
-	height: 11.5em;
+	height: 10em;
 	width: 15em;
 	font-size: 1.5em;
 	color: white;
@@ -464,6 +476,9 @@ canvas {
 	}
 	.card {
 		max-width: calc(100vw - 8rem);
+	}
+	.content h1 {
+		font-size: 1rem;
 	}
 }
 
@@ -623,7 +638,19 @@ canvas {
 	color: #414141;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 850px) {
+	.face.face2 {
+		padding: 0;
+	}
+	.face {
+		width: 115%;
+	}
+	.card-contact {
+		flex: 40%;
+		max-width: 60%;
+	}
+}
+@media screen and (max-width: 700px) {
 	.contact-container {
 		flex-direction: column;
 	}
@@ -636,20 +663,6 @@ canvas {
 	.card-contact {
 		margin-left: 100px;
 		flex: 100%;
-		max-width: 120%;
-	}
-}
-
-@media screen and (max-width: 850px) {
-	.face.face2 {
-		padding: 0;
-	}
-	.face {
-		width: 115%;
-	}
-	.card-contact {
-		flex: 40%;
-		max-width: 60%;
 	}
 }
 
