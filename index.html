@@ -24,11 +24,11 @@
 
   <!-- Navigation Bar -->
   <div class="topnav" id="myTopnav">
-    <a href="#home"><i class="fas fa-home" onclick="myFunction()"></i> Home</a>
-    <a href="#about"><i class="fas fa-address-card"></i> About Me</a>
+    <a href="#home"><i class="fas fa-home" onclick="toggleNavbar()"></i> Home</a>
+    <a href="#about"><i class="fas fa-address-card" onclick="toggleNavbar()"></i> About Me</a>
     <a href="#works"><i class="fas fa-briefcase"></i> My Works</a>
     <a href="#contact"><i class="fas fa-envelope"></i> Contact Me</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
       <i class="fa fa-bars"></i>
     </a>
   </div>
@@ -43,11 +43,14 @@
         <span>Web Developer <span>
       </h1>
     </div>
-    <div class="btn btn-one" href="#contact">
-      <span>
-        Contact Me
-      </span>
-    </div>
+    <a href="./My_Resume.pdf" target="_blank">
+        <div class="btn btn-one">
+
+        <span>
+          Get My Resume <i class="fas fa-paper-plane"></i>
+        </span>
+      </div>
+      </a>
   </div>
 
   <hr class="horizontal-divider">
@@ -57,7 +60,7 @@
   <!-- About Me Container -->
   <div id="about" class="about-container">
     <div class="about-child-image">
-      <img class="image-avatar" src="./images/IMG_20220116_182314.jpg" alt="My-Avatar">
+      <img class="image-avatar" src="./images/my_photo.jpg" alt="My-Avatar">
     </div>
 
     <div class="about-child-content">

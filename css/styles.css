@@ -13,13 +13,22 @@ body {
 	background-color: white;
 }
 
+/* ---------------------------------------------- HR ------------------------------------------- */
+.horizontal-divider {
+	height: 2px;
+	border-radius: 2px;
+	color: #ff457c;
+	border: 2px solid currentColor;
+	width: 95%;
+}
+/* ----------------------------------------- Title Header  ----------------------------------------- */
 .title-header {
 	font-size: 2.5rem;
 	font-weight: 800;
 	padding-left: 2%;
 }
 
-/* --------------------------------Navigation Bar ------------------------------------- */
+/* ---------------------------------------- Navigation Bar ------------------------------------------- */
 
 .topnav {
 	background-color: #000000;
@@ -65,9 +74,16 @@ body {
 
 	.topnav.responsive {
 		position: fixed;
-		z-index: 1;
+		z-index: 5;
 	}
 	.topnav.responsive a.icon {
+		position: absolute;
+		right: 0;
+		top: 0;
+		color: #000000;
+		background-color: #ff457c;
+	}
+	.topnav.responsive a.icon:hover {
 		position: absolute;
 		right: 0;
 		top: 0;
@@ -96,61 +112,9 @@ canvas {
 	padding: 50px;
 }
 
-canvas {
-	display: block;
-	vertical-align: bottom;
-}
-
 .title {
 	font-size: 6rem;
 	font-weight: 800;
-}
-
-@media screen and (max-width: 300px) {
-	.home-container {
-		top: 10%;
-		width: auto;
-		height: auto;
-	}
-
-	.title {
-		font-size: 2rem;
-	}
-}
-
-@media screen and (max-width: 1100px) {
-	.home-container {
-		top: 10%;
-	}
-
-	.title {
-		font-size: 5rem;
-	}
-}
-
-@media screen and (max-width: 850px) {
-	.home-container {
-		top: 18%;
-		width: auto;
-		height: auto;
-	}
-
-	.title {
-		font-size: 4.2rem;
-	}
-}
-
-@media screen and (max-width: 600px) {
-	.home-container {
-		top: 22%;
-		margin-left: 2%;
-	}
-	.title {
-		font-size: 3.3rem;
-	}
-	.heading {
-		text-align: center;
-	}
 }
 
 /* Button */
@@ -163,11 +127,16 @@ canvas {
 	z-index: 0;
 }
 
+a{
+	text-decoration: none;
+	color: #fff;
+}
 .btn-one {
 	font-size: 1.5rem;
 	font-weight: 800;
 	color: #fff;
 	padding: 8px;
+	width: 75%;
 	transition: all 0.3s;
 	position: relative;
 }
@@ -207,28 +176,11 @@ canvas {
 	height: 100%;
 	z-index: 1;
 	transition: all 0.3s;
-	background-color: rgb(255, 69, 124, 0.65);
+	background-color: rgb(255, 69, 124, 0.5);
 }
 .btn-one:hover::after {
 	opacity: 0;
 	transform: scale(0.1, 1);
-}
-
-@media screen and (max-width: 600px) {
-	.btn-one {
-		padding: 2px;
-		font-size: 1.2rem;
-		width: 100%;
-	}
-}
-
-/* ---------------------------------------------- HR ------------------------------------------- */
-.horizontal-divider {
-	height: 2px;
-	border-radius: 2px;
-	color: #ff457c;
-	border: 2px solid currentColor;
-	width: 95%;
 }
 
 /* -------------------------------------------About Container -----------------------------------------*/
@@ -245,11 +197,10 @@ canvas {
 }
 
 .about-child-image {
-	width: 29%;
+	width: 27%;
 	float: left;
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	margin-left: 2%;
 }
 
 .about-child-content {
@@ -264,76 +215,11 @@ canvas {
 	width: 70%;
 }
 
-@media screen and (max-width: 1400px) {
-	.about-child-content {
-		font-size: 1.35rem;
-	}
-}
-
-@media screen and (max-width: 1200px) {
-	.about-child-content {
-		font-size: 1.2rem;
-	}
-	.image-avatar {
-		width: 85%;
-	}
-}
-
-@media screen and (max-width: 1000px) {
-	.about-child-content {
-		font-size: 1.1rem;
-	}
-	.image-avatar {
-		width: 90%;
-		margin-left: 10px;
-	}
-}
-
-@media screen and (max-width: 850px) {
-	.about-container {
-		margin-top: 5%;
-	}
-	.about-child-content {
-		font-size: 1.1rem;
-		float: none;
-		width: auto;
-		height: auto;
-		margin: 2%;
-	}
-	.about-child-image {
-		margin-left: 25%;
-		margin-bottom: 6%;
-		float: none;
-	}
-	.image-avatar {
-		width: 45vw;
-	}
-}
-
-@media screen and (max-width: 600px) {
-	.about-container {
-	}
-	.about-child-content {
-		text-align: center;
-		font-size: 1.1rem;
-		float: none;
-	}
-	.about-child-image {
-		float: none;
-		margin-right: 10%;
-	}
-	.image-avatar {
-		max-width: 15rem;
-		height: auto;
-	}
-}
-
 /* ---------------------------------------- Works Container --------------------------------------- */
 #works {
 	padding-top: 5%;
 	margin-bottom: 8%;
 }
-/* nvskefdbvsebvs */
 
 .works-container {
 	margin: 0 auto;
@@ -387,7 +273,6 @@ canvas {
 .card .tags .tag {
 	font-size: 0.75em;
 	background: rgba(255, 69, 125, 0.9);
-	/* background: rgba(255, 255, 255, 0.258); */
 	border-radius: 0.3rem;
 	padding: 0 0.5em;
 	margin-right: 0.5em;
@@ -440,46 +325,6 @@ canvas {
 	font-size: 2em;
 	margin-bottom: 1.2rem;
 	margin-left: 1rem;
-}
-
-/* MEDIA QUERIES */
-@media screen and (max-width: 1400px) {
-	.works-container {
-		grid-template-columns: 1fr 1fr;
-		margin-left: auto;
-		margin-right: auto;
-		overflow: hidden;
-	}
-}
-
-@media screen and (max-width: 1000px) {
-	.works-container {
-		grid-template-columns: 1fr;
-		padding: 3rem, 1.5rem;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	.card-grid-space .num {
-		margin-left: 0;
-		text-align: center;
-	}
-	.card {
-		max-width: calc(100vw - 12rem);
-	}
-}
-
-@media screen and (max-width: 500px) {
-	.works-container {
-		padding: 3rem 1rem;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	.card {
-		max-width: calc(100vw - 8rem);
-	}
-	.content h1 {
-		font-size: 1rem;
-	}
 }
 
 /* -------------------------------------- Contact Container------------------------------------------- */
@@ -638,44 +483,7 @@ canvas {
 	color: #414141;
 }
 
-@media screen and (max-width: 850px) {
-	.face.face2 {
-		padding: 0;
-	}
-	.face {
-		width: 115%;
-	}
-	.card-contact {
-		flex: 40%;
-		max-width: 60%;
-	}
-}
-@media screen and (max-width: 700px) {
-	.contact-container {
-		flex-direction: column;
-	}
-	.face {
-		width: 160%;
-	}
-	.face.face2 {
-		padding: 5%;
-	}
-	.card-contact {
-		margin-left: 100px;
-		flex: 100%;
-	}
-}
-
-@media screen and (max-width: 1200px) {
-	.face.face2 {
-		padding: 0;
-	}
-	.card-contact {
-		flex: 40%;
-		max-width: 35%;
-	}
-}
-
+/* ----------------------------------------  Footer ------------------------------------------------ */
 #scroll-up {
 	float: right;
 	position: relative;
@@ -692,4 +500,403 @@ canvas {
 .footer {
 	text-align: center;
 	margin: 2%;
+}
+
+/* ---------------------------------------- Media Queries ------------------------------------------ */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	/* Home */
+	.home-container {
+		top: 22%;
+		width: 79%;
+		margin: 0;
+	}
+	.title {
+		font-size: 3.2rem;
+	}
+	.heading {
+		text-align: center;
+	}
+	.btn-one {
+		padding: 2px;
+		font-size: 1.4rem;
+		width: 100%;
+	}
+
+	/* About */
+	#about {
+		margin-bottom: 10%;
+	}
+	.about-container {
+		margin-left: auto;
+		margin-right: auto;
+		align-items: center;
+	}
+	.about-child-content {
+		text-align: center;
+		font-size: 1.1rem;
+		float: none;
+		width: 90%;
+		margin: 5% auto;
+	}
+	.about-child-image {
+		float: none;
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+	.image-avatar {
+		width: 200px;
+		margin: 0;
+	}
+
+	/* Works */
+	.works-container {
+		padding: 3rem 1rem;
+		margin-left: auto;
+		margin-right: auto;
+		grid-template-columns: 1fr;
+	}
+	.card {
+		height: 13rem;
+	}
+	.card-grid-space .num {
+		margin-left: 0;
+		text-align: center;
+	}
+	.card h1 {
+		font-size: 2rem;
+	}
+	.card p {
+		font-size: 1.3rem;
+	}
+
+	/* Contact  */
+	.content h1 {
+		font-size: 1rem;
+	}
+	.contact-container {
+		flex-direction: column;
+	}
+	.card-contact {
+		margin: 0 8%;
+		flex: 100%;
+		width: 100%;
+		max-width: 50%;
+	}
+	.face {
+		width: 160%;
+	}
+	.face.face2 {
+		padding: 5%;
+	}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+	/* Home */
+	.home-container {
+		top: 22%;
+		width: 82%;
+		margin: 0;
+	}
+	.title {
+		font-size: 3.2rem;
+	}
+	.heading {
+		text-align: center;
+	}
+	.btn-one {
+		padding: 2px;
+		font-size: 1.4rem;
+		width: 100%;
+	}
+
+	/* About */
+	#about {
+		margin-bottom: 10%;
+	}
+	.about-container {
+		margin-left: auto;
+		margin-right: auto;
+		align-items: center;
+	}
+	.about-child-content {
+		text-align: center;
+		font-size: 1.1rem;
+		float: none;
+		width: 90%;
+		margin: 5% auto;
+	}
+	.about-child-image {
+		float: none;
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+	.image-avatar {
+		width: 200px;
+		margin: 0;
+	}
+
+	/* Works */
+	.works-container {
+		padding: 3rem 1rem;
+		margin-left: auto;
+		margin-right: auto;
+		grid-template-columns: 1fr;
+	}
+	.card {
+		height: 13rem;
+	}
+	.card-grid-space .num {
+		margin-left: 0;
+		text-align: center;
+	}
+	.card h1 {
+		font-size: 2rem;
+	}
+	.card p {
+		font-size: 1.3rem;
+	}
+
+	/* Contact */
+	.content h1 {
+		font-size: 1rem;
+	}
+	.contact-container {
+		flex-direction: column;
+	}
+	.card-contact {
+		margin: 0 15%;
+		flex: 100%;
+		width: 100%;
+		max-width: 40%;
+	}
+	.face {
+		width: 160%;
+	}
+	.face.face2 {
+		padding: 5%;
+	}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+	/* Home */
+	.home-container {
+		top: 22%;
+		width: 82%;
+		margin: 0;
+	}
+	.title {
+		font-size: 4rem;
+	}
+	.btn-one {
+		padding: 5px;
+		font-size: 1.5rem;
+		width: 70%;
+	}
+
+	/* About */
+	#about {
+		margin-bottom: 10%;
+	}
+	.about-container {
+		margin-left: auto;
+		margin-right: auto;
+		align-items: center;
+	}
+	.about-child-content {
+		text-align: center;
+		font-size: 1.4rem;
+		float: none;
+		width: 90%;
+		margin: 5% auto;
+	}
+	.about-child-image {
+		float: none;
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+	.image-avatar {
+		width: 200px;
+		margin: 0;
+	}
+
+	/* Works */
+	.works-container {
+		padding: 3rem 1rem;
+		margin-left: auto;
+		margin-right: auto;
+		grid-template-columns: 1fr auto;
+	}
+	.card-grid-space .num {
+		margin-left: 0;
+		text-align: center;
+	}
+	.card {
+		max-width: 16rem;
+		max-height: 13rem;
+	}
+	.card h1 {
+		font-size: 1.5rem;
+	}
+	.card p {
+		font-size: 1.2rem;
+	}
+
+	/* Contact */
+	.content h1 {
+		font-size: 1.5rem;
+	}
+	.content p {
+		font-size: 1.2rem;
+	}
+	.contact-container {
+		flex-direction: row;
+	}
+	.face.face2 {
+		padding: 0;
+	}
+	.face {
+		width: 115%;
+	}
+	.card-contact {
+		flex: 50%;
+		max-width: 34%;
+	}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+	/* Home */
+	.home-container {
+		top: 22%;
+		width: 82%;
+		margin: 0;
+	}
+	.title {
+		font-size: 4.4rem;
+	}
+	.btn-one {
+		padding: 5px;
+		font-size: 1.5rem;
+		width: 70%;
+	}
+
+	/* About */
+	.about-child-content {
+		font-size: 1.2rem;
+	}
+	.image-avatar {
+		width: 85%;
+	}
+
+	/* Works */
+	.works-container {
+		grid-template-columns: 1fr auto;
+	}
+	.card-grid-space .num {
+		margin-left: 0;
+		text-align: center;
+	}
+	.card {
+		max-width: 19rem;
+		max-height: 14rem;
+	}
+	.card h1 {
+		font-size: 1.8rem;
+	}
+	.card p {
+		font-size: 1.3rem;
+	}
+
+	/* Contact */
+	.content h1 {
+		font-size: 1.5rem;
+	}
+	.content p {
+		font-size: 1rem;
+	}
+	.contact-container {
+		flex-direction: row;
+	}
+	.face.face2 {
+		padding: 0;
+	}
+	.face {
+		width: 115%;
+	}
+	.card-contact {
+		flex: 50%;
+		max-width: 34%;
+	}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+	/* Home */
+	.home-container {
+		top: 22%;
+		width: 82%;
+		margin: 0;
+	}
+	.title {
+		font-size: 4.6rem;
+	}
+	.btn-one {
+		padding: 5px;
+		font-size: 1.5rem;
+		width: 50%;
+	}
+
+	/* About */
+	.about-child-content {
+		font-size: 1.45rem;
+	}
+	.image-avatar {
+		width: 85%;
+	}
+
+	/* Works */
+	.works-container {
+		grid-template-columns: 1fr auto;
+	}
+	.card-grid-space .num {
+		margin-left: 0;
+		text-align: center;
+	}
+	.card {
+		max-width: 19rem;
+		max-height: 14rem;
+	}
+	.card h1 {
+		font-size: 1.8rem;
+	}
+	.card p {
+		font-size: 1.3rem;
+	}
+
+	/* Contact */
+	.content h1 {
+		font-size: 1.5rem;
+	}
+	.content p {
+		font-size: 1rem;
+	}
+	.contact-container {
+		flex-direction: row;
+	}
+	.face.face2 {
+		padding: 0;
+	}
+	.face {
+		width: 115%;
+	}
+	.card-contact {
+		flex: 30%;
+		max-width: 23.5%;
+	}
 }
